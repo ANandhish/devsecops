@@ -26,6 +26,7 @@ jobs:
           docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD
       - name: Build the container Image
         run: | 
+          cd ..
           docker build . --file coit-frontend/Dockerfile-multistage --tag 9533533/coit-frontend:v2
       - name: Push the container Image
         run: | 
