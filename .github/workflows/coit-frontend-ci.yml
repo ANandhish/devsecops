@@ -26,7 +26,7 @@ jobs:
           docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD
       - name: Build the container Image
         run: | 
-          docker build coit-frontend -t coitlearning/coit-frontend:latest -f coit-frontend/Dockerfile-multistage
+          docker build coit-frontend/Dockerfile-multistage -t coitlearning/coit-frontend:latest -f coit-frontend/Dockerfile-multistage
       - name: Push the container Image
         run: | 
           docker push 953533/coit-frontend:v5
